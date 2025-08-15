@@ -1,0 +1,87 @@
+
+.create-recipe {
+  max-width: 600px;
+  margin: 40px auto;
+  padding: 30px 40px;
+  background: #60dbc7;
+  border-radius: 16px;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
+  font-family: 'Segoe UI', sans-serif;
+}
+
+.create-recipe h2 {
+  text-align: center;
+  margin-bottom: 20px;
+  color: #2c3e50;
+}
+
+.create-recipe form {
+  display: flex;
+  flex-direction: column;
+}
+
+.create-recipe label {
+  font-weight: bold;
+  margin-bottom: 8px;
+  margin-top: 20px;
+  color: #34495e;
+}
+
+.create-recipe input[type="text"],
+.create-recipe input[type="number"],
+.create-recipe textarea {
+  padding: 10px 15px;
+  border: 1px solid #dcdde1;
+  border-radius: 8px;
+  font-size: 16px;
+  background-color: #e77777;
+  transition: border 0.2s ease-in-out;
+}
+
+.create-recipe input:focus,
+.create-recipe textarea:focus {
+  border-color: #00cec9;
+  outline: none;
+}
+
+.create-recipe textarea {
+  min-height: 100px;
+  resize: vertical;
+}
+
+.create-recipe button {
+  margin-top: 20px;
+  padding: 12px 20px;
+  font-size: 16px;
+  border: none;
+  border-radius: 8px;
+  background-color: #00b894;
+  color: white;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.create-recipe button:hover {
+  background-color: #019875;
+}
+
+.create-recipe button[type="button"] {
+  background-color: #6c5ce7;
+  margin-top: 10px;
+}
+
+.create-recipe button[type="button"]:hover {
+  background-color: #4b4ded;
+}
+
+.create-recipe input::placeholder {
+  color: #b2bec3;
+}
+
+@media (max-width: 640px) {
+  .create-recipe {
+    padding: 20px;
+    margin: 20px;
+  }
+}

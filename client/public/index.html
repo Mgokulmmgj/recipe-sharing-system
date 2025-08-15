@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <link rel="icon" href="%PUBLIC_URL%/favicon.ico" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="theme-color" content="#ffb347" /> <!-- Warm recipe-themed color -->
+    <meta name="description" content="Share, explore, and enjoy a world of recipes made by food lovers like you!" />
+    
+    <!-- Open Graph Meta -->
+    <meta property="og:title" content="Recipe Share - Your Kitchen Inspiration" />
+    <meta property="og:description" content="Discover and share amazing recipes from around the world in one modern MERN app." />
+    <meta property="og:image" content="%PUBLIC_URL%/preview.png" />
+    <meta property="og:url" content="https://your-recipe-app.com" />
+    <meta name="twitter:card" content="summary_large_image" />
+
+    <!-- Apple Touch Icon -->
+    <link rel="apple-touch-icon" href="%PUBLIC_URL%/logo192.png" />
+    <link rel="manifest" href="%PUBLIC_URL%/manifest.json" />
+
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;600&display=swap" rel="stylesheet" />
+
+    <style>
+      body {
+        margin: 0;
+        padding: 0;
+        font-family: 'Poppins', sans-serif;
+        background: linear-gradient(to right, #fff8f0, #ffe5d9); /* Soft warm background */
+        transition: background 1s ease;
+      }
+
+      #root {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        min-height: 100vh;
+      }
+
+      /* Loader while React mounts */
+      #loader {
+        width: 100px;
+        height: 100px;
+        border: 10px solid #f3f3f3;
+        border-top: 10px solid #ff914d; /* Orange for food/cooking */
+        border-radius: 50%;
+        animation: spin 1s linear infinite;
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        margin: auto;
+      }
+
+      @keyframes spin {
+        0% { transform: rotate(0deg); }
+        100% { transform: rotate(360deg); }
+      }
+    </style>
+
+    <title>Recipe Share | Discover & Create</title>
+  </head>
+  <body>
+    <noscript>You need to enable JavaScript to run this app.</noscript>
+
+    <!-- Optional Loader -->
+    <div id="loader"></div>
+
+    <!-- React Root -->
+    <div id="root"></div>
+
+    <script>
+      // Remove loader after React loads
+      window.addEventListener("load", () => {
+        const loader = document.getElementById("loader");
+        if (loader) loader.style.display = "none";
+      });
+    </script>
+  </body>
+</html>
